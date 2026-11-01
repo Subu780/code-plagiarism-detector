@@ -1,0 +1,10 @@
+# build output
+build/
+detector
+*.o
+*.zip
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
