@@ -237,13 +237,11 @@ code-plagiarism-detector/
 - It detects structural copies. Heavy restructuring (reordering statements, replacing loops with different constructs) can lower the score.
 - The tokenizer is a lightweight scanner, not a full C++ parser. `::` is read as two `:` tokens, and literal suffixes such as `1.5f` split into a number plus an identifier. Both files are treated the same way, so scores stay consistent.
 - Hashes are reduced modulo 1,000,000,007, so collisions are possible but very unlikely at this scale.
-- The summary banner always prints `(k = 4 window)`, even if a different `k` was passed on the command line.
 - Paste mode relies on `/dev/tty`, so it needs a Unix-style terminal (Linux, macOS or WSL).
 
 **Roadmap**
 
 - [ ] Compare a whole folder of submissions and print a ranked summary table (`ReportGenerator::printSummary` is already stubbed for this)
-- [ ] Print the real `k` in the report banner
 - [ ] Optional JSON output for scripting
 - [ ] Unit tests for each stage
 - [ ] CMake support
